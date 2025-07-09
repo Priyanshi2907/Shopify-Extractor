@@ -49,7 +49,7 @@ Example structure:
   ...
 }
 
-**## Instruction to run "Suqah.com, freakins.com"**
+## Instruction to run "Suqah.com, freakins.com"
 1. Install dependecies from requirements.txt
 2. Also install tesseract-ocr engine if not already:
 
