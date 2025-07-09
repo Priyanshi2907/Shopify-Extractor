@@ -21,7 +21,7 @@ def fetch_with_retries(url, retries=3, backoff=1):
 
 def extract_suqah_size_chart(product_url):
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)  # Use headless=False for debugging
+        browser = p.chromium.launch(headless=True)  # Use headless=False for debugging
         page = browser.new_page()
         try:
             print("extracting product....")
@@ -98,8 +98,6 @@ def scrape_suqah():
             price = price_texts[0].strip() if price_texts else "N/A"
             
             size_chart=extract_suqah_size_chart(full_url)
-            if size_chart is None:
-                continue
             products.append({
                 "product_title": title,
                 "product_url": full_url,

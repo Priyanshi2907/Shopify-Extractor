@@ -81,7 +81,7 @@ def scrape_littleboxindia():
     tree = html.fromstring(response.content)
     
     # Select all product blocks
-    product_cards = tree.xpath("//div[@class='product-block']")
+    product_cards = tree.xpath("//div[@class='product-block']")[0:6] #Extracted 5 products
 
     products = []
     for card in product_cards:

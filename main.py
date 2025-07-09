@@ -30,11 +30,12 @@ def scrape_selected_stores(domains):
             print(f"⚠️ No scraper function defined for: {domain}")
 
     # Save all data in one JSON file
-    with open("aggregated_output.json", "w", encoding="utf-8") as f:
+    with open("final_output.json", "w", encoding="utf-8") as f:
         json.dump(aggregated_data, f, indent=2, ensure_ascii=False)
     print("📁 All data saved to aggregated_output.json")
 
 if __name__ == "__main__":
     # Example usage
     store_list = ["westside.com", "littleboxindia.com", "suqah.com", "freakins.com"]
+
     scrape_selected_stores(store_list)

@@ -107,8 +107,6 @@ def scrape_westside():
             "Product Url" :productUrl,
             "variant": item.get("variant"),
             "price": f"₹ {item.get('price')}",
-            "category": item.get("category"),
-            "quantity": item.get("quantity"),
             "size_chart": size_chart
         })
 

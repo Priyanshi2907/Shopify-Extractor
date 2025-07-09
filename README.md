@@ -49,6 +49,27 @@ Example structure:
   ...
 }
 
+## Instruction to run "Suqah.com, freakins.com"
+1. Install dependecies from requirements.txt
+2. Also install tesseract-ocr engine if not already:
+
+Download: https://github.com/tesseract-ocr/tesseract
+
+Direct Windows installer (recommended):
+👉 https://github.com/UB-Mannheim/tesseract/wiki
+
+
+After installing it:
+
+Set the path (Only on Windows):
+Add this in your script:
+
+import pytesseract
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe' according to your system file path
+
+Then run these 2 again
+##
+
 🔧 Requirements
 * Python 3.7+
 *Internet connection (for live scraping)
